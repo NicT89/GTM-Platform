@@ -1,0 +1,22 @@
+{
+  "name": "brand-kit-ads-management",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @market-intel/web",
+    "dev:web": "npm run dev --workspace @market-intel/web",
+    "dev:api": "npm run start:dev --workspace @market-intel/api",
+    "dev:mcp": "npm run dev --workspace @market-intel/mcp-server",
+    "build": "npm run build --workspace @market-intel/domain --workspace @market-intel/config --workspace @market-intel/api --workspace @market-intel/web --workspace @market-intel/mcp-server",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}
